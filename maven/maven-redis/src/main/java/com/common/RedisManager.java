@@ -54,14 +54,14 @@ public class RedisManager {
 	@SuppressWarnings("deprecation")
     public static void returnResource(final Jedis jedis) {
         if (jedis != null && jedisPool != null) {
-            jedisPool.returnResource(jedis);
+            //jedisPool.returnResource(jedis);
         }
     }
     
     @SuppressWarnings("deprecation")
     public static void returnBrokenResource(final Jedis jedis) {
         if (jedis != null && jedisPool != null) {
-            jedisPool.returnBrokenResource(jedis);
+            //jedisPool.returnBrokenResource(jedis);
         }
     }
 

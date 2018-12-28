@@ -8,5 +8,6 @@
   <modules>
   	<module>maven-redis</module>
   	<module>maven-rocketmq</module>
+  	<module>maven-mongodb</module>
   </modules>
 </project>
