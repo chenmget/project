@@ -1,0 +1,39 @@
+package user;
+
+import model.User
+
+rule "ScoreA"
+ 	no-loop true
+    when
+        $user:User(score>=90)
+    then
+        $user.setLevel("A");
+        update($user);
+end
+
+rule "ScoreB"
+ no-loop true
+   when
+        $user:User(score>=80&&score<90)
+    then
+       $user.setLevel("B");
+        update($user);
+end
+
+rule "ScoreC"
+ no-loop true
+    when
+        $user:User(score>=60&&score<80)
+    then
+        $user.setLevel("C");
+        update($user);
+end
+
+rule "ScoreD"
+ no-loop true
+    when
+        $user:User(score<60)
+    then
+        $user.setLevel("D");
+        update($user);
+end

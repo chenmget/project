@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>maven</artifactId>
-    <groupId>com.chenm</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
 
-  <groupId>com.chenm</groupId>
   <artifactId>maven-mongodb</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>maven-mongodb Maven Webapp</name>
@@ -66,4 +59,9 @@
       </plugins>
     </pluginManagement>
   </build>
+  <parent>
+  	<groupId>com.chenm</groupId>
+  	<artifactId>maven</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
 </project>
