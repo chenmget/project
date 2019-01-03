@@ -10,6 +10,5 @@
   	<module>maven-rocketmq</module>
   	
   	<module>maven-drools</module>
-  	<module>maven-mongodb Maven Webapp</module>
   </modules>
 </project>
