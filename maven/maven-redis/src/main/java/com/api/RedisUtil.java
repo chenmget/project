@@ -15,10 +15,13 @@ public class RedisUtil {
         public static final int FAIL_INT = -5;
         /**Jedis实例获取失败*/
         public static final String FAIL_STRING = "-5";
+       
     }
 	
+	 public static Jedis jedis = RedisManager.getJedis();
+	
 	 public static String set(String key, String value) {
-	        Jedis jedis = RedisManager.getJedis();
+	        
 	        if(jedis == null){
 	            return JedisStatus.FAIL_STRING;
 	        }
@@ -46,7 +49,7 @@ public class RedisUtil {
 	     * @author jqlin
 	     */
 	    public static String set(String key, String value, int expire) {
-	        Jedis jedis = RedisManager.getJedis();
+	        //Jedis jedis = RedisManager.getJedis();
 	        if(jedis == null){
 	            return JedisStatus.FAIL_STRING;
 	        }
@@ -73,7 +76,7 @@ public class RedisUtil {
 	     * @author jqlin
 	     */
 	    public static String get(String key) {
-	        Jedis jedis = RedisManager.getJedis();
+	        //Jedis jedis = RedisManager.getJedis();
 	        if(jedis == null){
 	            return JedisStatus.FAIL_STRING;
 	        }
@@ -100,7 +103,7 @@ public class RedisUtil {
 	     * @author jqlin
 	     */
 	    public static long expire(String key, int seconds) {
-	        Jedis jedis = RedisManager.getJedis();
+	        //Jedis jedis = RedisManager.getJedis();
 	        if(jedis == null){
 	            return JedisStatus.FAIL_LONG;
 	        }
