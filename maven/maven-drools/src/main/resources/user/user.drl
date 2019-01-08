@@ -1,0 +1,8 @@
+package com.drool.user;
+
+rule "User"
+    when
+        eval(true)
+    then
+        System.out.println("user");
+end

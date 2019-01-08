@@ -8,7 +8,7 @@ public class Demo {
 	public static void main(String[] args) {
 		KieServices kieServices = KieServices.Factory.get();
         KieContainer kieContainer = kieServices.newKieClasspathContainer();
-        KieSession kieSession = kieContainer.newKieSession("helloWorldSession");
+        KieSession kieSession = kieContainer.newKieSession("hellowSession");
         kieSession.fireAllRules();
         kieSession.dispose();
 	}
