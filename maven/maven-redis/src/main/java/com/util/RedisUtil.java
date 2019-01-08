@@ -1,6 +1,8 @@
-package com.common;
+package com.util;
 
 
+
+import com.common.RedisManager;
 
 import redis.clients.jedis.Jedis;
 
