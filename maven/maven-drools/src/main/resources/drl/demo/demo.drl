@@ -1,0 +1,9 @@
+package com.drool.a;
+
+rule "User"
+no-loop true
+    when
+        eval(true)
+    then
+        System.out.println("aaa");
+end

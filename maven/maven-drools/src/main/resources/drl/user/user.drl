@@ -1,0 +1,22 @@
+package com.drool.user;
+import com.drools.model.User
+
+rule "age less 20"
+no-loop true
+    when
+        $p:User(age<20);
+    then
+    	$p.setLevel(1);
+    	update($p);
+        System.out.println("age less 20");
+end
+
+rule "age more 20"
+no-loop true
+    when
+        $p:User(age>=20);
+    then
+    	$p.setLevel(2);
+    	update($p);
+        System.out.println("age more 20");
+end

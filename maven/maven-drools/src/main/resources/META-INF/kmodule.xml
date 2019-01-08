@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
-     <kbase name="helloword" packages="helloword">
-		<ksession name="hellowSession" />
-	</kbase> 
-    
-<!--     <kbase name="user" packages="user">
+    <kbase name="user" packages="drl.user">
 		<ksession name="userSession" />
-	</kbase> -->
+	</kbase> 
+	<kbase name="a" packages="drl.demo">
+		<ksession name="demoSession" />
+	</kbase> 
 </kmodule>
