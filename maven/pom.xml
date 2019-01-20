@@ -13,5 +13,6 @@
   	<module>maven-mongodb</module>
   	<module>maven-elasticsearch</module>
     
+  	<module>maven-commons</module>
   </modules>
 </project>

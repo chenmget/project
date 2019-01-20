@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.common.RedisUtil;
+import com.util.RedisUtil;
 
 public class Main {
 	public static void main(String[] args) throws InterruptedException {
