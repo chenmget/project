@@ -3,10 +3,14 @@ package demo;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import demo.service.EmployeeService;
 
 public class DemoTest {
 	
-	private EmployeeService 
+	@Autowired
+	private EmployeeService employeeService;
 	
 	@Test
 	public void test() {
