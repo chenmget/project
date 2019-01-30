@@ -11,8 +11,8 @@
   	<module>maven-rocketmq</module>
   	<module>maven-drools</module>
   	<module>maven-mongodb</module>
-  	<module>maven-elasticsearch</module>
-    
-  	<module>maven-commons</module>
+
+
+  	<module>maven-common</module>
   </modules>
 </project>
