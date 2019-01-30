@@ -14,5 +14,6 @@
 
 
   	<module>maven-common</module>
+  	<module>maven-elasticsearch</module>
   </modules>
 </project>

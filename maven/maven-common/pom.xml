@@ -5,6 +5,18 @@
     <artifactId>maven</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>maven-common</artifactId>
+  <artifactId>maven-commons</artifactId>
   <build/>
+  <version>1.0.0</version>
+  <groupId>com.chenm</groupId>
+  <dependencies>
+   <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+	<dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+  </dependencies>
+ 
+  
 </project>
