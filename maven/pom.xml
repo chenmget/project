@@ -5,16 +5,15 @@
   <artifactId>maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <build/>
+   
   <modules>
   	<module>maven-redis</module>
   	<module>maven-rocketmq</module>
   	<module>maven-drools</module>
   	<module>maven-mongodb</module>
-
-
   	<module>maven-common</module>
   	<module>maven-elasticsearch</module>
   	<module>maven-netty</module>
+  	<module>maven-springboot</module>
   </modules>
 </project>
