@@ -5,16 +5,54 @@
   <artifactId>maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <build/>
   <modules>
   	<module>maven-redis</module>
   	<module>maven-rocketmq</module>
   	<module>maven-drools</module>
   	<module>maven-mongodb</module>
-
-
   	<module>maven-common</module>
   	<module>maven-elasticsearch</module>
   	<module>maven-netty</module>
+  	<module>maven-springboot</module>
+  	<module>maven-cloud</module>
   </modules>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- 此处是官方文档提供的必须要引入管理的文件 -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+        <!--此处是使用SpringBoot maven plugin必须添加的支持 不写的话后续版本可能会出现打包失败等问题-->
+      <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>2.0.1.RELEASE</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
