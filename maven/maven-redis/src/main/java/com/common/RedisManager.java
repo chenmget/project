@@ -17,9 +17,8 @@ public class RedisManager {
 	// 在borrow一个jedis实例时，是否提前进行validate操作；如果为true，则得到的jedis实例均是可用的；
 	private static boolean TEST_ON_BORROW = true;
 	private static JedisPool jedisPool;
-
-	// Jedis连接池配置
-	static {
+	
+	private  RedisManager(){
 		try {
 			JedisPoolConfig config = new JedisPoolConfig();
 			config.setMaxTotal(MAX_TOTAL);
@@ -33,21 +32,15 @@ public class RedisManager {
 			e.printStackTrace();
 		}
 	}
+	
 
 	// 获取jedis实例
 	public synchronized static Jedis getJedis() {
-		// 连接池中获取资源
-		try {
-			if (jedisPool != null) {
-				Jedis jedis = jedisPool.getResource();
-				return jedis;
-			} else {
-				return null;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
+		if(jedisPool==null){
+			new RedisManager();
 		}
+		return jedisPool.getResource();
+		
 	}
 
 	// 释放jedis和jedisPool资源
